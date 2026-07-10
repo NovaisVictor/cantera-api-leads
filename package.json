@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir dist --target bun",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --target bun-linux-x64 --outfile server src/index.ts",
+    "start": "./server",
     "db:generate": "bun --env-file .env drizzle-kit generate",
     "db:migrate": "bun --env-file .env drizzle-kit migrate",
     "db:studio": "bun --env-file .env drizzle-kit studio",
