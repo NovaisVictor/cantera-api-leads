@@ -8,7 +8,7 @@ import { leadsRoutes } from '@/http/leads/routes'
 export const app = new Elysia()
   .use(
     cors({
-      origin: ['http://localhost:3000'],
+      origin: ['http://localhost:3000', 'https://canteraapp.com'],
     }),
   )
   .use(openapi())
